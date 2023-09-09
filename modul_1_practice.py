@@ -22,3 +22,4 @@ lon2 = -0.1275
 
 distance = RADIUS * math.acos(math.sin(math.radians(lat1)) * math.sin(math.radians(lat2)) + math.cos(math.radians(lat1)) * math.cos(math.radians(lat2)) * math.cos(math.radians(lon1) - math.radians(lon2)))
 print(distance)
+
