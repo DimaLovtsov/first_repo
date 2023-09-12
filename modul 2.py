@@ -23,7 +23,7 @@ elif kind_classes == "оффлайн" or kind_classes == "офлайн":
         answer_online = input("Введіть ТАК або НІ: ")
 
         if answer_online == "так":
-             #подумати, що зробити
+            print("Добре") #подумати, що зробити
         elif answer_online == "ні":
             print("Нам шкода, що ми не можемо нічого вам запропонувати.")
         
