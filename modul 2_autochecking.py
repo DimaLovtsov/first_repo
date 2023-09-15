@@ -47,8 +47,7 @@ while True:
         print(developer_type)
     except ValueError:
         print(input(f"Enter the number {work_experience} not with a comma only using a point. Example: 0,5 is wrong, 0.5 is correct. "))
-
-    continue
+        continue
 
     break
 
