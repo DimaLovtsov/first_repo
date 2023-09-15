@@ -38,13 +38,24 @@
 
 #У банк поклали 100 долларів аід 5% річних. Обчислити 10 років
 
-deposit = 100
-percent = 0.05
-T = 10
+# deposit = 100
+# percent = 0.05
+# T = 10
 
-for year in range(1, T + 1)
-    new_deposit = deposit*(1 + percent / 12) ** 12
-    deposit = new_deposit
-print(deposit)
+# for year in range(1, T + 1)
+#     new_deposit = deposit*(1 + percent / 12) ** 12
+#     deposit = new_deposit
+# print(deposit)
 
-print(deposit * (1 + percent / 12) ** (12*10))
+# print(deposit * (1 + percent / 12) ** (12*10))
+
+num = int(input("Enter the number from 0 to 100: "))
+sum = 0
+counter = 0
+
+while counter < num:
+    counter += 1
+    sum += counter
+    print(f"{sum}")
+    
+    
