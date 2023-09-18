@@ -31,24 +31,57 @@
 #     work_experience = float((input("Enter your full work experience in years: ")))
 # except:
 #     print("It's not a number")
-while True:
-    try:
-        work_experience = (input("Enter your full work experience in years: "))
-        work_experience = float(work_experience)
-
-        if work_experience > 1 and work_experience <= 5 :
-            developer_type = "Middle"
-        elif work_experience <= 1 :
-            developer_type = "Junior"    
-        else:
-            developer_type = "Senior"
 
 
-        print(developer_type)
-    except ValueError:
-        print(input(f"Enter the number {work_experience} not with a comma only using a point. Example: 0,5 is wrong, 0.5 is correct. "))
-        continue
+# while True:
+#     try:
+#         work_experience = (input("Enter your full work experience in years: "))
+#         work_experience = float(work_experience)
 
-    break
+#         if work_experience > 1 and work_experience <= 5 :
+#             developer_type = "Middle"
+#         elif work_experience <= 1 :
+#             developer_type = "Junior"    
+#         else:
+#             developer_type = "Senior"
 
-print("Thank you.")
+
+#         print(developer_type)
+#     except ValueError:
+#         print(input(f"Enter the number {work_experience} not with a comma only using a point. Example: 0,5 is wrong, 0.5 is correct. "))
+#         continue
+
+#     break
+
+# print("Thank you.")
+
+
+#Ex 8
+
+# message = "Never argue with stupid people, they will drag you down to their level and then beat you with experience."
+# search = "r"
+# result = 0
+
+# for ch in message:
+#     if ch == search:
+#         result += 1
+    
+# print(result)
+
+#Ex 9
+
+# first = int(input("Enter the first integer: "))
+# second = int(input("Enter the second integer: "))
+
+# gcd = first if first < second else second
+# print(gcd)
+
+#10
+
+num = int(input("Enter integer (0 for output): "))
+sum = 0
+while num != 0:
+    for i in range(num + 1):
+        sum += i 
+        print(sum)
+    break    

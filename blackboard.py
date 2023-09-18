@@ -49,13 +49,24 @@
 
 # print(deposit * (1 + percent / 12) ** (12*10))
 
-num = int(input("Enter the number from 0 to 100: "))
-sum = 0
-counter = 0
+# num = int(input("Enter the number from 0 to 100: "))
+# sum = 0
+# counter = 0
 
-while counter < num:
-    counter += 1
-    sum += counter
-    print(f"{sum}")
-    
-    
+# while counter < num:
+#     counter += 1
+#     sum += counter
+#     print(f"{sum}")
+
+# for num in range (0,5):
+#     print(num)
+
+# for num in range (0,30,3):
+#     print(num)
+
+# for symbol in "Good morning":
+#     print(symbol) 
+
+play_today = input("Max, are you going to play Dota today? ")
+game = True if play_today == "yes" else False
+print("Saturday is nice" if game else "bad")

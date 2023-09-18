@@ -37,5 +37,5 @@
 
 print("Hello")
 item = input("Enter a number: ")
-for item in range(5, 21, 2)
+for item in range(5, 21, 2):
     print(f'Iteration (item)')
