@@ -91,16 +91,49 @@
 # print(result)
 
 
-def discount_price(price, discount):
-    def apply_discount():
+# def discount_price(price, discount):
+#     def apply_discount():
         
-        nonlocal price
-        discount = price/int("100")
-        price -= discount
+#         nonlocal price
+#         discount = price/int("100")
+#         price -= discount
 
-    apply_discount()
-    return price
+#     apply_discount()
+#     return price
 
 
-result = discount_price(10, 1)
-print(result)
+# result = discount_price(10, 1)
+# print(result)
+
+
+#Ex 5
+
+# def get_fullname(first_name, last_name, middle_name=''):
+#     if middle_name:
+#         return f"{first_name} {middle_name} {last_name}"
+#     else:    
+#         return f"{first_name} {last_name}"
+    
+
+#Ex 8
+
+# def cost_delivery(quantity, *_, discount=0):
+#     result = (5 + 2 * (quantity - 1)) * (1 - discount)
+#     return result
+
+# print (cost_delivery(2, 1, 2, 3))
+
+
+#Ex 9
+
+def cost_delivery(quantity, *_, discount=0):
+    """Функція повертає суму за доставлення замовлення.
+
+     Перший параметр &mdash; кількість товарів в замовленні.
+     Параметр знижки discount, який передається лише як ключовий, за замовчуванням має значення 0."""
+
+    
+    result = (5 + 2 * (quantity - 1)) * (1 - discount)
+    return result
+
+print(cost_delivery.__doc__)

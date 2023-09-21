@@ -38,14 +38,22 @@ def calculate_sum():
 calculate_sum()
 '''
 
-def calculate_sum(x):
+# def calculate_sum(x):
     
-    y = 3
+#     y = 3
 
-    return x + y
+#     return x + y
 
-calculate_sum(5)   #TypeError: calculate_sum() missing 1 required positional argument: 'x'  
-                    # Нужно обязательно при вызове указать в скобках аргумент, но не х, а его значение, например 5. Правильный вариант ниже.
+# calculate_sum(5)   #TypeError: calculate_sum() missing 1 required positional argument: 'x'  
+#                     # Нужно обязательно при вызове указать в скобках аргумент, но не х, а его значение, например 5. Правильный вариант ниже.
 
-result = calculate_sum(5)
+# result = calculate_sum(5)
+# print(result)
+
+#Ex 5
+
+def fun(a, b=2, c=3):
+    return a + b * c
+
+result = fun(5)
 print(result)
