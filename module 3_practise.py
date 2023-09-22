@@ -137,3 +137,44 @@ def cost_delivery(quantity, *_, discount=0):
     return result
 
 print(cost_delivery.__doc__)
+
+
+#Ex 10
+
+def factorial(n):
+    if n < 2:
+        return 1
+    else:
+        return n * factorial(n - 1)
+
+def number_of_groups(n, k):
+    a = factorial(n)  # a = n!
+    b = factorial(n - k)  # b = (n - k)!
+    c = factorial(k)  # c = k!
+
+    return int(a / (b * c))  # n! / ((n - k)! · k!)
+    # return int(factorial(n) / (factorial(n - k) * factorial(k)))  # n! / ((n - k)! · k!)
+
+
+Ex 11 fibonacci
+
+
+def fibonacci(n):
+    
+    if n == 0:
+        return 0
+
+    if n in (1, 2):
+        return 1
+    return fibonacci(n - 1) + fibonacci(n - 2)
+
+
+def iterative_fibonacci(n):
+    a, b = 0, 1
+    for i in range(n):
+        a, b = b, a + b
+    return a
+
+
+print(iterative_fibonacci(8))
+
