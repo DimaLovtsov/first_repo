@@ -122,8 +122,9 @@
 
 def format_ingredients(items):
     
-    items_a = ["2 eggs", "1 liter sugar", "1 tsp salt", "vinegar"]
-    a = items_a.insert(3, "and")
+    items_a = ", ".join(items[0:-1]) + ' and ' + items[-1]
     return(items_a)
 
-print(format_ingredients(1))
+a = ["2 eggs", "1 liter sugar", "1 tsp salt", "vinegar"]
+print(format_ingredients(a))
+
