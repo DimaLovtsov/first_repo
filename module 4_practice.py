@@ -120,11 +120,23 @@
 # 2 eggs, 1 liter sugar, 1 tsp salt and vinegar
 # Напишіть функцію format_ingredients, яка прийматиме на вхід список з інгредієнтів ["2 eggs", "1 liter sugar", "1 tsp salt", "vinegar"] та повертатиме рядок зібраний з його елементів в описаний вище спосіб. Ваша функція має вміти обробляти списки будь-якої довжини.
 
-def format_ingredients(items):
+# def format_ingredients(items):
     
-    items_a = ", ".join(items[0:-1]) + ' and ' + items[-1]
-    return(items_a)
+#     items_a = ", ".join(items[0:-1]) + ' and ' + items[-1]
+#     return(items_a)
 
-a = ["2 eggs", "1 liter sugar", "1 tsp salt", "vinegar"]
-print(format_ingredients(a))
+# a = ["2 eggs", "1 liter sugar", "1 tsp salt", "vinegar"]
+# print(format_ingredients(a))
 
+
+def format_ingredients(items):
+
+    a = ["2 eggs", "1 liter sugar", "1 tsp salt", "vinegar"]
+    new_items = a.pop(-1)
+    print(new_items)
+    items_add = new_items.insert(3, 'and')
+    list = items_add.extend(new_items)
+    return list
+
+
+print(format_ingredients(list))

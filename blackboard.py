@@ -67,6 +67,20 @@
 # for symbol in "Good morning":
 #     print(symbol) 
 
-play_today = input("Max, are you going to play Dota today? ")
-game = True if play_today == "yes" else False
-print("Saturday is nice" if game else "bad")
+# play_today = input("Max, are you going to play Dota today? ")
+# game = True if play_today == "yes" else False
+# print("Saturday is nice" if game else "bad")
+
+def format_ingredients(items):
+
+    a = ["2 eggs", "1 liter sugar", "1 tsp salt", "vinegar"]
+    new_items = a.pop(-1)
+    a.append('and')
+    a.extend(new_items)
+    print(a)
+    
+    return a
+
+items = ["2 eggs", "1 liter sugar", "1 tsp salt", "vinegar"]
+print(format_ingredients(items))
+
