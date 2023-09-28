@@ -52,8 +52,10 @@ calculate_sum()
 
 #Ex 5
 
-def fun(a, b=2, c=3):
-    return a + b * c
+# def fun(a, b=2, c=3):
+#     return a + b * c
 
-result = fun(5)
-print(result)
+# result = fun(5)
+# print(result)
+
+

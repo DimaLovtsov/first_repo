@@ -129,14 +129,42 @@
 # print(format_ingredients(a))
 
 
-def format_ingredients(items):
+# def format_ingredients(items):
 
-    a = ["2 eggs", "1 liter sugar", "1 tsp salt", "vinegar"]
-    new_items = a.pop(-1)
-    print(new_items)
-    items_add = new_items.insert(3, 'and')
-    list = items_add.extend(new_items)
-    return list
+#     a = ["2 eggs", "1 liter sugar", "1 tsp salt", "vinegar"]
+#     new_items = a.pop(-1)
+#     print(new_items)
+#     items_add = new_items.insert(3, 'and')
+#     list = items_add.extend(new_items)
+#     return list
+
+# Правильний варіант
+# print(format_ingredients(list))
 
 
-print(format_ingredients(list))
+# def format_ingredients(items):
+#     if len(items) == 0:
+#         return ""
+#     if len(items) == 1:
+#         return str(items[0])
+#     result = ""
+#     for i in range(len(items) - 2):
+#         result += f"{items[i]}, "
+#     result += f"{items[-2]} and {items[-1]}"
+#     return result
+
+def get_grade(key):
+    data_students = {"F": 1, "FX": 2, "E": 3, "D": 3, "C":4, "B": 5, "A": 5}
+    return data_students.get(key)
+
+def get_description(key):
+    data_students = {
+        "F": "Unsatisfactorily",
+        "FX": "Unsatisfactorily",
+        "E": "Enough",
+        "D": "Satisfactorily",
+        "C": "Good",
+        "B": "Very good",
+        "A": "Perfectly"
+    }
+    return data_students.get(key)
