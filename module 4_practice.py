@@ -169,17 +169,46 @@
 #     }
 #     return data_students.get(key)
 
-def lookup_key(data, value):
+# def lookup_key(data, value):
 
-    b = {'data' : value}
-    for value in b:
-        if value == 0:
-            data = []
-        return(data)
+#     b = {'data' : value}
+#     for value in b:
+#         if value == 0:
+#             data = []
+#         return(data)
 
-    else:
-        set = [data, value]
-        return(set)
+#     else:
+#         set = [data, value]
+#         return(set)
 
-new_lookup_key = lookup_key("b", "0")
-print(new_lookup_key)
+# new_lookup_key = lookup_key("b", "0")
+# print(new_lookup_key)
+
+#правильний варіант
+# def lookup_key(data, value):
+
+#     my_list = []
+
+#     for key, val in data.items():
+#         if val == value:
+#             my_list.append(key)
+#     return my_list
+
+
+#Ex_6 У нас є список показників студентів групи – це список з отриманими балами з тестування. Необхідно поділити список на дві частини. Напишіть функцію split_list, яка приймає список (цілі числа), знаходить середнє значення бала у списку та ділить його на два списки. У перший потрапляють значення менше середнього, включаючи середнє значення, тоді як у другий — строго більше від середнього. Функція повертає кортеж цих двох списків. Для порожнього списку повертаємо два порожні списки.
+
+def split_list(grade):
+
+    less = []
+    more = []
+    if not len(grade):
+        return less, more
+    
+    average = int(sum(grade)/len(grade))
+    for rating in grade:
+        if rating <= average:
+            less.append(rating, )
+        else:
+            more.append(rating, )
+
+    return less, more
