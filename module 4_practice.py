@@ -153,18 +153,33 @@
 #     result += f"{items[-2]} and {items[-1]}"
 #     return result
 
-def get_grade(key):
-    data_students = {"F": 1, "FX": 2, "E": 3, "D": 3, "C":4, "B": 5, "A": 5}
-    return data_students.get(key)
+# def get_grade(key):
+#     data_students = {"F": 1, "FX": 2, "E": 3, "D": 3, "C":4, "B": 5, "A": 5}
+#     return data_students.get(key)
 
-def get_description(key):
-    data_students = {
-        "F": "Unsatisfactorily",
-        "FX": "Unsatisfactorily",
-        "E": "Enough",
-        "D": "Satisfactorily",
-        "C": "Good",
-        "B": "Very good",
-        "A": "Perfectly"
-    }
-    return data_students.get(key)
+# def get_description(key):
+#     data_students = {
+#         "F": "Unsatisfactorily",
+#         "FX": "Unsatisfactorily",
+#         "E": "Enough",
+#         "D": "Satisfactorily",
+#         "C": "Good",
+#         "B": "Very good",
+#         "A": "Perfectly"
+#     }
+#     return data_students.get(key)
+
+def lookup_key(data, value):
+
+    b = {'data' : value}
+    for value in b:
+        if value == 0:
+            data = []
+        return(data)
+
+    else:
+        set = [data, value]
+        return(set)
+
+new_lookup_key = lookup_key("b", "0")
+print(new_lookup_key)
