@@ -1,3 +1,5 @@
+'''
+
 num4 = complex('3+5j')
 print(num4)  # prints (3 + 5j)
 
@@ -18,3 +20,27 @@ print(list1)
 print(list2)
 
 print(random.random())
+
+'''
+
+# Square root calculation
+
+import math
+x = math.sqrt(9)
+
+print(x)
+
+a = math.ceil(5.01)
+b = math.floor (5.01)
+
+print(a)
+print(b)
+
+c = math.pow(3, 3)
+print(c)
+
+d = math.pi
+print(d)
+
+e = math.factorial(6)
+print(e)
