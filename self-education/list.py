@@ -94,3 +94,14 @@ print('Here:', prime_numbers)
 
 prime_numbers = [2, 3, 5, 7, 9, 11]
 print(prime_numbers.clear())
+
+# Operating System List
+systems = ['Windows', 'macOS', 'Linux', '123', '456']
+print('Original List:', systems)
+
+# Reversing a list	
+# Syntax: reversed_list = systems[start:stop:step] 
+reversed_list = systems[3:1:-1]
+
+# updated list
+print('Updated List:', reversed_list)
