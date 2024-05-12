@@ -69,3 +69,7 @@ print(numbers)
 
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g']
 print("Total letters: ", len(letters))
+
+#pop
+
+languages = ['Python', 'Java', 'C++', 'Ruby', 'C']
