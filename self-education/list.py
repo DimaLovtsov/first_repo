@@ -73,3 +73,15 @@ print("Total letters: ", len(letters))
 #pop
 
 languages = ['Python', 'Java', 'C++', 'Ruby', 'C']
+print('Return Value:', languages.pop(-2))
+print(languages)
+print('Return Value:', languages.pop(-1))
+print(languages)
+
+number = [3, 6, 9, 12, 15]
+print(number.pop(-3))
+print(number)
+print(number.pop(-2))
+print(number)
+print(number.pop(-2))
+print(number)
