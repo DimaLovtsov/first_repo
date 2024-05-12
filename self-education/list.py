@@ -85,3 +85,12 @@ print(number.pop(-2))
 print(number)
 print(number.pop(-2))
 print(number)
+
+#clear
+
+prime_numbers = [2, 3, 5, 7, 9, 11]
+prime_numbers.clear()
+print('Here:', prime_numbers)
+
+prime_numbers = [2, 3, 5, 7, 9, 11]
+print(prime_numbers.clear())
