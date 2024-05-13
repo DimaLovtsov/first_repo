@@ -109,7 +109,7 @@ reversed_list = systems[3:1:-1]
 print('Updated List:', reversed_list)
 
 '''
-
+'''
 mixed_list = ['Hello', -34, 'Java', True]
 print('1.', mixed_list[-1])
 mixed_list[1] = "Hi"
@@ -117,3 +117,65 @@ print('2.', mixed_list)
 mixed_tuple = (1, 3, 4, 5)
 mixed_tuple[1] = 100
 print('3.', mixed_tuple)
+'''
+
+'''
+months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October','November', 'December']
+print(months)
+print(months[:])
+print(months[3])
+index = months.index("September")
+print(index)
+for month in months:
+    print(month)
+
+months[3] = "APRIL"
+print(months)
+
+months[3:6] = "APRIL", "MAY", "JUNE"
+print(months)
+print(months[::3])
+
+months.remove("APRIL")
+print(months)
+print("Total: ", len(months))
+
+months_ext = months.pop(8)
+print(months_ext)
+print(months)
+
+months_ext_2 = months.pop(-1)
+print(months)
+
+del months[:7]
+for month in months:
+    print(month)
+
+index = months.index("September")
+print(index)
+'''
+
+months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October','November', 'December']
+print(months)
+months.sort()
+print("Sorted list is: ", months)
+months.sort(reverse=True)
+print("Sorted revers is: ", months)
+
+for month in months:
+    print(month)
+
+ages = [15, 14, 23, 45, 29, 45, 32, 29, 50, 45]
+ages_29 = ages.count(29)
+print(ages_29)
+ages_45 = ages.count(45)
+print(ages_45)
+
+ages.sort()
+print(ages)
+
+for age in ages:
+    if age < 17:
+        del age 
+        
+print("Ages older 17: ", ages)
