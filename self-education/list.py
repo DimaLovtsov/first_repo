@@ -155,6 +155,7 @@ index = months.index("September")
 print(index)
 '''
 
+'''
 months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October','November', 'December']
 print(months)
 months.sort()
@@ -176,6 +177,78 @@ print(ages)
 
 for age in ages:
     if age < 17:
-        del age 
+        print(age)
+        
+        print(ages)
         
 print("Ages older 17: ", ages)
+'''
+'''
+ages = [15, 14, 23, 45, 29, 45, 32, 29, 50, 45]
+ages_29 = ages.count(29)
+print(ages_29)
+ages_45 = ages.count(45)
+print(ages_45)
+
+ages.sort()
+print(ages)
+
+ages_to_remove = 29
+
+while ages_to_remove in ages:
+    ages.remove(ages_to_remove)
+
+print(ages)
+
+under_17 = [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+
+while under_17 in ages:
+    under_17.clear()
+
+print(ages)
+'''
+
+'''
+ages = [15, 14, 23, 45, 29, 45, 32, 10, 8, 29, 50, 45]
+
+ages.sort()
+print(ages)
+
+while ages.count(45):
+    ages.remove(45)
+
+
+print(ages)
+'''
+
+ages = [15, 14, 23, 45, 8, 12, 29, 45, 32, 10, 8, 29, 23, 50, 45, 16, 23, 14, 17, 17]
+
+ages.sort()
+print(ages)
+
+ages_above_17 = []
+
+for age in ages:
+    if age < 17:
+            continue
+    else:
+        ages_above_17.append(age)
+
+print(ages_above_17)
+
+'''
+#not finished
+from collections import Counter
+ages = [15, 14, 23, 45, 8, 12, 29, 45, 32, 10, 8, 29, 23, 50, 45, 16, 23, 14, 17, 17]
+
+ages.sort()
+print(ages)
+
+age = Counter(ages)
+   
+age_multiply = [element for element, count in age.items() if count > 1]
+
+ages = [age for age in ages if age not in age_multiply]
+
+print(ages)
+'''
