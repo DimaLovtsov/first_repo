@@ -220,7 +220,7 @@ while ages.count(45):
 
 print(ages)
 '''
-
+'''
 ages = [15, 14, 23, 45, 8, 12, 29, 45, 32, 10, 8, 29, 23, 50, 45, 16, 23, 14, 17, 17]
 
 ages.sort()
@@ -237,6 +237,7 @@ for age in ages:
 print(ages_above_17)
 
 '''
+'''
 #not finished
 from collections import Counter
 ages = [15, 14, 23, 45, 8, 12, 29, 45, 32, 10, 8, 29, 23, 50, 45, 16, 23, 14, 17, 17]
@@ -252,3 +253,35 @@ ages = [age for age in ages if age not in age_multiply]
 
 print(ages)
 '''
+
+'''
+list = [3, 5, 8, 10]
+list_power = [num**2 for num in list]
+print(list_power)
+
+list = [3, 5, 8, 10]
+print(list)
+list_plus = [num+5 for num in list]
+print(list_plus)
+
+list = [3, 5, 8, 10]
+print(list)
+list_less = [num>9 for num in list]
+print(list_less)
+'''
+'''
+list = [3, 5, 8, 10]
+print(list)
+list_less = [num for num in list if num > 8]
+print(list_less)
+
+ages = [15, 14, 23, 45, 8, 12, 29, 45, 32, 10, 8, 29, 23, 50, 45, 16, 23, 14, 17, 17]
+
+ages.sort()
+print(ages)
+ages_above_16 = [age for age in ages if age > 16]
+print(ages_above_16)
+'''
+ages = [15, 14, 23, 45, 8, 12, 29, 45, 32, 10, 8, 29, 23, 50, 45, 16, 23, 14, 17, 17]
+ages_above_16 = [age for age in ages if age > 16]
+print(ages_above_16)
