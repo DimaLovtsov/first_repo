@@ -282,6 +282,35 @@ print(ages)
 ages_above_16 = [age for age in ages if age > 16]
 print(ages_above_16)
 '''
+'''
 ages = [15, 14, 23, 45, 8, 12, 29, 45, 32, 10, 8, 29, 23, 50, 45, 16, 23, 14, 17, 17]
 ages_above_16 = [age for age in ages if age > 16]
 print(ages_above_16)
+
+numbers_10 = [num for num in range (1, 100) if num // 10 == 2]
+
+print(numbers_10)
+
+print("0 is a girl, 1 is a boy")
+children = [1, 0, 0, 0, 1, 1, 0]
+children_boy_girl = ["Boy" if child % 2 == 1 else "Girl" for child in children]
+children_boy_girl.sort()
+print(children_boy_girl)
+
+children_boy = [child for child in children if child == 1]
+
+while children_boy.count(1)>0:
+    children_boy[0] = "boy"
+
+print(children_boy)
+
+children_girl = [child for child in children if child == 0]
+print(children_boy)
+print(children_girl)
+'''
+
+print("0 is a girl, 1 is a boy")
+children = [1, 0, 0, 0, 1, 1, 0]
+
+children[0:] = ['boy', 'boy']
+print(children)
