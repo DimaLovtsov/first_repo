@@ -312,5 +312,5 @@ print(children_girl)
 print("0 is a girl, 1 is a boy")
 children = [1, 0, 0, 0, 1, 1, 0]
 
-children[0:] = ['boy', 'boy']
-print(children)
+children_set = set(children)
+print(children_set)
