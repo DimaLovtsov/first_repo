@@ -1,3 +1,5 @@
+'''
+
 #converting to a set
 
 days = ['Mon', 'Tus', 'Wen', 'Thur', 'Fri', 'Fri']
@@ -62,3 +64,8 @@ temp_dif_1 = temperature_jan.symmetric_difference(temperature_feb)
 temp_dif_2 = temperature_jan ^ temperature_feb
 print(temp_dif_1)
 print(temp_dif_2)
+
+'''
+
+
+
