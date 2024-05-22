@@ -113,7 +113,7 @@ while mark <5:
 
 marks = empty_marks
 '''
-
+'''
 def find_average_marks(marks):
     sum_of_marks = sum(marks)
     num_of_marks = len(marks)
@@ -141,7 +141,92 @@ marks = [90, 90, 90, 95, 92]
 average_marks = find_average_marks(marks)
 grade = compute_grade(average_marks)
 
-
-
 print(average_marks)
 print(grade)
+
+'''
+
+
+'''
+#Exercise
+#Can you create a program to add and multiply two numbers?
+#For this, create two functions add_numbers() and multiply_numbers(). These functions 
+    #should compute the result and return them to the function call and should print 
+    #from outside the function.
+
+def add_numbers(num1, num2):
+    result_sum = num1 + num2
+    return result_sum
+
+
+def multiply_numbers(num1, num2):
+    result_multiply = num1*num2
+    return result_multiply
+
+num1 = 4
+num2 = 8
+
+result_sum = add_numbers(num1, num2)
+result_multiply = multiply_numbers(num1, num2)
+
+print("The sum is: ", result_sum)
+print("The product is: ", result_multiply)
+'''
+
+
+'''
+#Excercise
+#Write a function to check if a given number is prime or not.
+#Return True if the number is prime, otherwise return False.
+
+def prime_number(num):
+    if num <= 1:
+        return False
+    elif num <=3:
+        return True
+    elif num % 2 == 0 or num % 3 == 0:
+        return False
+    else:
+        return True
+
+
+num = int(input("Enter a number: "))
+if prime_number(num):
+    print(f'{num} is a prime number')
+else:
+    print(f'{num} is not a prime number')
+
+
+
+
+def is_prime(n):
+    if n <= 1:
+        return False
+    elif n <=3:
+        return True
+    elif n % 2 == 0 or n % 3 == 0:
+        return False
+    else:
+        return True
+
+
+num = 9
+if is_prime(num):
+    print (True)
+else:
+    print(False)
+    '''
+
+
+#Exercise
+#calculate the simple interest
+
+def simple_interest(principal, rate, time):
+    calculation_simple_interest = (principal * rate * time) / 100
+    final_amount = calculation_simple_interest + principal
+    return (calculation_simple_interest, final_amount)
+
+
+
+n = simple_interest(1000, 5, 2) 
+print(n)
