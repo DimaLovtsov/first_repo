@@ -235,17 +235,8 @@ print(n)
 
 
 
-def dates (date):
-
-    for d in range(duration.days + 1):
-        day = first_date + timedelta(days=d)
-        return day
-    
-
-def shifts (shift):
-
-    for shift in calendar_shifts:
-        return shift
+def dates_shifts(date, shift):
+    return date, shift
 
 from datetime import date, timedelta
 
@@ -268,8 +259,10 @@ for shift in range(5):
     calendar_shifts.extend(day_off)
     shift += 1
 
-day = dates(date)
-shift = shifts(calendar_shifts)
+for d in range(duration.days + 1):
+    day = first_date + timedelta(days=d)
 
-print(day, shift)
+date_shifts = dates_shifts(day, shift)
+print(date_shifts)
+
 

@@ -140,11 +140,11 @@ for shift in range(5):
 print(calendar_shifts)
 print(len(calendar_shifts))
 
-'''
+
 for d in range(duration.days + 1):
     day = first_date + timedelta(days=d)
     print(day)
-''' 
+
 for shift in calendar_shifts:
     print(shift) 
        
