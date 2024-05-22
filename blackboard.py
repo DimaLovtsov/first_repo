@@ -71,6 +71,8 @@
 # game = True if play_today == "yes" else False
 # print("Saturday is nice" if game else "bad")
 
+
+'''
 def format_ingredients(items):
 
     a = ["2 eggs", "1 liter sugar", "1 tsp salt", "vinegar"]
@@ -84,3 +86,78 @@ def format_ingredients(items):
 items = ["2 eggs", "1 liter sugar", "1 tsp salt", "vinegar"]
 print(format_ingredients(items))
 
+'''
+'''
+
+#If Ania has a day off
+
+from datetime import date, datetime
+
+a = datetime(2024, 5, 23)
+
+b = datetime(2024, 7, 15)
+
+print(a)
+print(b)
+
+result = b - a
+print(result)
+
+print("Step number 2: ")
+
+from datetime import date, timedelta
+
+first_date = date(2024, 5, 23)
+duration = timedelta(days = 53)
+
+for d in range(duration.days + 1):
+    day = first_date + timedelta(days=d)
+    print(day)
+
+'''
+
+from datetime import date, timedelta
+
+first_date = date(2024, 5, 23)
+duration = timedelta(days = 60)
+
+
+shift_day = ['day', 'day', 'day', 'day']
+shift_night = ['night', 'night', 'night', 'night']
+day_off = ['day off', 'day off']
+
+calendar_shifts  = []
+
+#Cycle number 1. There are 5 cycles in total.
+
+for shift in range(5):
+    calendar_shifts.extend(shift_night)
+    calendar_shifts.extend(day_off)
+    calendar_shifts.extend(shift_day)
+    calendar_shifts.extend(day_off)
+    shift += 1
+
+print(calendar_shifts)
+print(len(calendar_shifts))
+
+'''
+for d in range(duration.days + 1):
+    day = first_date + timedelta(days=d)
+    print(day)
+''' 
+for shift in calendar_shifts:
+    print(shift) 
+       
+
+
+#
+       
+
+
+
+
+
+#calendar_shifts = [(shift_night, day_off, shift_day, day_off)*5]
+#for shift in calendar_shifts:
+    
+    

@@ -216,7 +216,7 @@ if is_prime(num):
 else:
     print(False)
     '''
-
+'''
 
 #Exercise
 #calculate the simple interest
@@ -230,3 +230,46 @@ def simple_interest(principal, rate, time):
 
 n = simple_interest(1000, 5, 2) 
 print(n)
+
+'''
+
+
+
+def dates (date):
+
+    for d in range(duration.days + 1):
+        day = first_date + timedelta(days=d)
+        return day
+    
+
+def shifts (shift):
+
+    for shift in calendar_shifts:
+        return shift
+
+from datetime import date, timedelta
+
+first_date = date(2024, 5, 23)
+duration = timedelta(days = 60)
+
+
+shift_day = ['day', 'day', 'day', 'day']
+shift_night = ['night', 'night', 'night', 'night']
+day_off = ['day off', 'day off']
+
+calendar_shifts  = []
+
+#Cycle number 1. There are 5 cycles in total.
+
+for shift in range(5):
+    calendar_shifts.extend(shift_night)
+    calendar_shifts.extend(day_off)
+    calendar_shifts.extend(shift_day)
+    calendar_shifts.extend(day_off)
+    shift += 1
+
+day = dates(date)
+shift = shifts(calendar_shifts)
+
+print(day, shift)
+
