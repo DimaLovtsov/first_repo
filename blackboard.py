@@ -116,6 +116,9 @@ for d in range(duration.days + 1):
 
 '''
 
+
+'''
+
 from datetime import date, timedelta
 
 first_date = date(2024, 5, 23)
@@ -144,7 +147,7 @@ print(len(calendar_shifts))
 for d in range(duration.days + 1):
     day = first_date + timedelta(days=d)
     print(day)
-
+ 
 for shift in calendar_shifts:
     print(shift) 
        
@@ -161,3 +164,23 @@ for shift in calendar_shifts:
 #for shift in calendar_shifts:
     
     
+'''
+
+
+def day_shift( day, shift):
+    return day + ":" + shift
+
+print(day_shift("23.05.2024", "night"))
+
+
+def multiply(*numbers):
+
+    result = 1
+    for num in numbers:
+        result *= num
+    
+    return result
+
+
+
+print(multiply(3, 5, 10, 100))

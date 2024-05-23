@@ -234,10 +234,6 @@ print(n)
 '''
 
 
-
-def dates_shifts(date, shift):
-    return date, shift
-
 from datetime import date, timedelta
 
 first_date = date(2024, 5, 23)
@@ -250,7 +246,7 @@ day_off = ['day off', 'day off']
 
 calendar_shifts  = []
 
-#Cycle number 1. There are 5 cycles in total.
+#Cycle for shifts
 
 for shift in range(5):
     calendar_shifts.extend(shift_night)
@@ -259,10 +255,12 @@ for shift in range(5):
     calendar_shifts.extend(day_off)
     shift += 1
 
+#Cycle for days
+
 for d in range(duration.days + 1):
     day = first_date + timedelta(days=d)
+    print(day)
 
-date_shifts = dates_shifts(day, shift)
-print(date_shifts)
-
+for shift in calendar_shifts:
+    print(shift)
 
