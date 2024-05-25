@@ -1,5 +1,5 @@
-print(int(True))
-print(int(False))
+#print(int(True))
+#print(int(False))
 
 #float to integer
 '''
@@ -59,4 +59,143 @@ print(h)
 print(type(h))
 
 '''
+'''
+
+#to float
+
+a = 3
+print(a)
+print(float(a))
+
+b = '35'
+c = float(b)
+print(b)
+print(type(b))
+print(float(b))
+print(type(c))
+
+'''
+'''
+
+#a = -28
+#print(abs(a))
+
+#printing differences
+
+#nr_1
+
+info = ('What', 'is', 'your', 'name')
+
+word = ' '
+for i in info:
+    word += i + ' '
+print(word) #What is your name
+
+#nr_2
+
+info = ('What', 'is', 'your', 'name')
+
+word = ' '
+for i in info:
+    word += i + ' '
+    print(word) #What
+                #What is
+                #What is your
+                #What is your name
+
+
+number = 30
+words = "seconds to Mars"
+print(str(number) + words)  # 30seconds to Mars
+
+first_name = input("Enter your first name: ")
+print(first_name)
+last_name = input("Enter your last name: ")
+print(last_name)
+print(first_name, last_name)
+'''
+
+
+'''
+print("How are you", end= ' ')
+print('doing?')
+
+name = 'Joe'
+age = 23
+country = 'USA'
+salary = 100.2
+
+print(f"This is {name}. He is {age} years old. He came from {country} where his salary was {salary} per year.")
+
+print('{} {} {} {}'.format(name, age, country, salary)) #Joe 23 USA 100.2
+print('{3} {0} {2} {1}'.format(name, age, country, salary))  #100.2 Joe USA 23
+
+print('{0:s} {1:d} {2:s} {3:f}'.format(name, age, country, salary))   #Joe, 23, USA, 100.200000
+#print('{0:s} {1:s} {2:s} {3:s}'.format(name, age, country, salary))
+
+s_1 = "Start"
+d = 2
+s_2 = "Speak"
+print('{0:*^79}'.format(' The end '))
+print('{0:<10} {1:^10} {2:>10}'.format(s_1, d, s_2))
+'''
+
+'''
+#f-string
+
+a = 6
+b = 10
+print("a + b =", a + b)
+print(f'a + b = {a+b}')
+
+print("Are\nyou\nokay\nor\nnot?")
+
+name, age, country = "John", 25, "USA"
+print(name)
+print(age)
+print(country)
+
+print("Are you okay or not?", 2, 5, 20, "Do you hear me?", 100, sep = "!")
+
+print("Are\vyou\nokay\vor\nnot?")
+'''
+
+'''
+desire = "I want to rest"
+direction = 'abroad!'
+
+for i in range(3):
+    print(desire, end = " ")
+    print(direction)
+
+a = 'Wroclaw'
+print(a[:])
+print(a[0])
+print(a[1])
+print(a[-1])
+print(a[2:6])
+print(a[::2])
+print(a[-4:-2])
+print(a[::1])
+print(a[::2])
+print(a[::3])
+print(a[::4])
+print(a[::-1])
+print(a[-2::-2])
+ 
+'''
+print(len('Create a function that takes a String as an argument.'))
+
+a_letter = 'Create a function that takes a String as an argument.'
+
+print(a_letter.count("a"))
+print(a_letter.count("t"))
+print(a_letter.count("b"))
+
+print(len(str(545233767684354552778278572841676545432277)))
+545233767684354552778278572841676545432277
+
+to_do = "wake up at 7 am, do gimnastique, make some tea, learn programming language"
+print(to_do.split(','))
+
 
