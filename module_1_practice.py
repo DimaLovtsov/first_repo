@@ -51,29 +51,49 @@ for i in out:
 
 # print("The result is: ", a * b)
 
-a = 'Python' 
-b = str(3)
-print(a +' '+ b)
+# a = 'Python' 
+# b = str(3)
+# print(a +' '+ b)
 
-c = 5
-d = c
+# c = 5
+# d = c
 
-print(c, d)
-print(id(c))
-print(id(d))
+# print(c, d)
+# print(id(c))
+# print(id(d))
 
-e = 10
-f = e
-print(e is f)
-print(id(e), id(f))
+# e = 10
+# f = e
+# print(e is f)
+# print(id(e), id(f))
 
-f = 11
-print(e is f)
-print(id(e), id(f))
+# f = 11
+# print(e is f)
+# print(id(e), id(f))
 
-print(type(e))
-print(type(a))
+# print(type(e))
+# print(type(a))
+
+# print(3 + 5)
+# print(10*2)
+
+# a = 40
+# b = a - 2
+# print(b)
+# a = a - b
+# print(a)
+# a = a - 1
+# print(a)
+
+a = 10
+a -= 1
+print(a)
 
 
+a = 100
+b = 20
+a += b
+print(a)
 
+print(pow(3, 5))
              
