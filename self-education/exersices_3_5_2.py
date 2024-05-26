@@ -54,6 +54,7 @@ day_devide_hour = (second_per_day // second_per_hour)
 print("Day devides by hour: ", day_devide_hour)
 '''
 
+'''
 # Ex 3.8
 
 favorite = 7
@@ -63,12 +64,15 @@ name_start = "David"
 print(name_start.upper())
 print(name_start.lower())
 print(name_start.swapcase())
+'''
 
 poem = '''Yes, I'll smile, indeed, through tears and weeping
 Sing my songs where evil holds its sway,
 Hopeless, a steadfast hope forever keeping,
 I shall live! You thoughts of grief, away!'''
 
+
+'''
 print(poem[:15])
 print(len(poem))
 print(poem.startswith("Yes"))
@@ -81,3 +85,67 @@ print(poem.rfind(word))
 print(poem.count(word))
 print(poem.isalnum())
 print(poem.isalpha())
+
+
+name_1 = "     !!! Johnatan !!!      Smith  "
+print(name_1)
+print(name_1.lstrip())
+print(name_1.rstrip())
+print(name_1.strip())
+
+print(name_1.lstrip('!'))
+print(name_1.strip('!'))
+name_2 = "    Johnatan\n Smith  "
+print(name_2)
+string_1 = '???Why???'
+print(string_1.lstrip('?'))
+
+name_3 = "???!!! Goodbye !!!???"
+print(name_3.strip('?!'))
+'''
+'''
+#Ex 5
+#Client Data
+
+first_name = input("Enter your first name: ")
+last_name = input("Enter your last name: ")
+country = input("Enter your country: ")
+city = input("Enter your city: ")
+house = input("Enter the number of your house: ")
+flat = input("Enter the number of your flat: ")
+poste_code = input("Enter your post_code: ")
+
+print("Check your data.")
+print(f"{first_name}\n{last_name}\n{country}\n{city}\n{house}\n{flat}\n{poste_code}")
+'''
+
+'''
+#Ex 7
+#vacations lasted 7 days
+
+vacation_days = int(input("How many days your vacations lasted? "))
+
+vacation_hours = vacation_days * 24
+vacation_minutes = vacation_hours * 60
+vacation_seconds = vacation_minutes * 60
+
+vacation_hours_str = str(vacation_hours)
+vacation_minutes_str = str(vacation_minutes)
+vacation_seconds_str = str(vacation_seconds)
+
+print(vacation_hours_str.ljust(12))
+print(vacation_minutes_str.ljust(12))
+print(vacation_seconds_str.ljust(12))
+
+print(vacation_hours_str.rjust(6))
+print(vacation_minutes_str.rjust(6))
+print(vacation_seconds_str.rjust(6))
+
+print(vacation_hours_str.center(6))
+print(vacation_minutes_str.center(6))
+print(vacation_seconds_str.center(6))
+'''
+
+# Ex 9
+digits = "1 2 3 4"
+print(digits.split())
