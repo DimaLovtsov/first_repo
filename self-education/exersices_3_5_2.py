@@ -56,3 +56,28 @@ print("Day devides by hour: ", day_devide_hour)
 
 # Ex 3.8
 
+favorite = 7
+print(favorite)
+
+name_start = "David"
+print(name_start.upper())
+print(name_start.lower())
+print(name_start.swapcase())
+
+poem = '''Yes, I'll smile, indeed, through tears and weeping
+Sing my songs where evil holds its sway,
+Hopeless, a steadfast hope forever keeping,
+I shall live! You thoughts of grief, away!'''
+
+print(poem[:15])
+print(len(poem))
+print(poem.startswith("Yes"))
+print(poem.endswith("I shall live!"))
+print("I shall live!" in poem)
+
+word = ","
+print(poem.find(word))
+print(poem.rfind(word))
+print(poem.count(word))
+print(poem.isalnum())
+print(poem.isalpha())
