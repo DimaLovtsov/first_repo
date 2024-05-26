@@ -184,6 +184,9 @@ print(a[::-1])
 print(a[-2::-2])
  
 '''
+
+
+'''
 print(len('Create a function that takes a String as an argument.'))
 
 a_letter = 'Create a function that takes a String as an argument.'
@@ -197,5 +200,53 @@ print(len(str(545233767684354552778278572841676545432277)))
 
 to_do = "wake up at 7 am, do gimnastique, make some tea, learn programming language"
 print(to_do.split(','))
+'''
+
+#first_number = float(input("First: "))
+#second_number = float(input("Second: "))
+#print("Sum: ", first_number + second_number)
+
+'''
+#methods of the string
+
+example = 'create a function that takes a String as an argument. then just wait. after that you can rest.'
+print(example.capitalize()) # Create a function that takes a String as an argument. then just wait. after that you can rest.'  #Only the first character is capitalized
+example_2 = 'Create A Function That Takes a String as an Trgument. Then just wait. After That You can Rest.'
+print(example_2.casefold()) #all the letters are small
+print(example.upper()) #all the letters are capitalized
+print(example.count("a")) # count a certain sign #3 (Create, funCtion, Can)
+print(example.find("t"))
+print(example.title()) #every new word starts with uppercase
+#print(example.translate())
+'''
+a = "Meow meow"
+print(a.ljust(40), a.rjust(0))
+print(a.center(40))
+print(a.rjust(40))
+print(a.center(40))
+print(a.rjust(40))
+print(a.ljust(40))
+print(a.center(40))
+
+info = 'Create a function that takes a String as an argument. then just wait. after that you can rest.' 
+print(info.replace("Create", "Delete"))
+
+a = "meowmeow"
+b = "meowmeowmeowmeow"
+c = a+b
+print(c)
+print(a*3)
+
+text = "I'd like to travel to Shanghai"
+print(text[0:21])
+print(text[:21])
+print(text[22:])
+print(text[12:18])
+print(text.upper())
+print(text.upper().lower())
+print(text.split())
 
 
+    
+
+   
