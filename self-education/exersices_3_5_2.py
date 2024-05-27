@@ -147,5 +147,15 @@ print(vacation_seconds_str.center(6))
 '''
 
 # Ex 9
-digits = "1 2 3 4"
-print(digits.split())
+digits = input("Enter four digits in a row: ")
+num_0 = int(digits[0])
+num_1 = int(digits[1])
+num_2 = int(digits[2])
+num_3 = int(digits[3])
+sum = num_0 + num_1 + num_2 + num_3
+
+print(sum)
+# print(digits_separate)
+print("The sum of {} + {} + {} + {} is {}".format(num_0, num_1, num_2, num_3, sum))
+
+
