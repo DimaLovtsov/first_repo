@@ -309,8 +309,171 @@ print(children_boy)
 print(children_girl)
 '''
 
-print("0 is a girl, 1 is a boy")
-children = [1, 0, 0, 0, 1, 1, 0]
 
-children_set = set(children)
-print(children_set)
+
+#29.05.2024 Revision lists
+
+#How to create a new list
+
+a = [1, 2, 3, 4]
+b = a.copy()
+c = list(a)
+d = a[:]
+
+print(a, b, c, d)
+print(a + b + c + d)
+
+b[0] = 5
+print(b)
+print(a)
+
+city = "Antananarivu"
+city_list = list(city)  #
+print(city_list)
+
+city_list_join = "".join(city_list)  #['A', 'n', 't', 'a', 'n', 'a', 'n', 'a', 'r', 'i', 'v', 'u']
+print(city_list_join) #Antananarivu
+
+#SPLIT function
+
+date = "12.06.2013"
+date_list = date.split(".")
+print(date_list)
+
+many_slashes = "hi//there///how/are//you/doing/?"
+print(many_slashes.split('/'))  #['hi', '', 'there', '', '', 'how', 'are', '', 'you', 'doing', '?'] #only one slash is splited, the other once " "
+print(many_slashes)
+
+#INDEX method
+
+country = "Great Britain"
+country_list = list(country)
+
+position = country_list.index('G') + 1
+print(position)
+
+labels = ["Jack Daniels", "Baccardy", "Glen", "Red Label"]
+rating = labels.index("Glen") + 1
+print(rating)
+
+#list of lists
+
+number_list = [5, 7, 12]
+word_list = ["Sun", "Moon", "Day", "Night"]
+sign_list = ["/", ".", ":", "%"]
+
+sum_list = [number_list, word_list, sign_list]
+
+print(sum_list) #[[5, 7, 12], ['Sun', 'Moon', 'Day', 'Night'], ['/', '.', ':', '%']]
+print(sum_list[2][3]) # % 
+print(sum_list[1][2])
+
+#change of elements
+number_list[1] = 183
+print(number_list)
+
+#slicing
+
+sum_list_slicing_1 = sum_list[0:1]
+print(sum_list_slicing_1) #[[5, 183, 12]]
+
+sum_list_slicing_2 = sum_list[0:2]
+print(sum_list_slicing_2) #[[5, 183, 12], ['Sun', 'Moon', 'Day', 'Night']]
+
+sum_list_slicing_3 = sum_list[1:3]
+print(sum_list_slicing_3) #[['Sun', 'Moon', 'Day', 'Night'], ['/', '.', ':', '%']]
+
+sum_list_slicing_4 = sum_list[::-1]  
+print(sum_list_slicing_4) #[['/', '.', ':', '%'], ['Sun', 'Moon', 'Day', 'Night'], [5, 183, 12]]
+
+
+    #0  1  2  3   4   5    6  7  8  9   10  11
+x = [2, 4, 7, 9, 15, 204, 13, 3, 6, 11, 42, 18]
+
+print(x[2:6]) #[7, 9, 15, 204]
+print(x[7:10:2]) #[3, 11]
+print(x[-2:-5:-1]) #[42, 11, 6]
+
+#APPEND & INSERT methods
+
+visited = ["Wroclaw", "Warsaw", "Krakow"]
+visited.append("Lublin")
+print(visited)
+
+visited.insert(0, "Rumia")
+print(visited)
+
+visited.insert(3, "Gdansk")
+print(visited)
+
+#Extend method
+
+group_1 = ["Girl 1", "Girl 2", "Girl 3"]
+group_2 = ["Boy 1", "Boy 2", "Boy 3"]
+
+group_1.extend(group_2)
+print(group_1) #['Girl 1', 'Girl 2', 'Girl 3', 'Boy 1', 'Boy 2', 'Boy 3']
+group_2.extend(group_1)
+print(group_2) #['Boy 1', 'Boy 2', 'Boy 3', 'Girl 1', 'Girl 2', 'Girl 3', 'Boy 1', 'Boy 2', 'Boy 3']
+
+
+#   DELETE, REMOVE, POP methods
+print(group_1[3:6])
+del group_1 [3:6] #['Boy 1', 'Boy 2', 'Boy 3']
+print(group_1) #['Girl 1', 'Girl 2', 'Girl 3'] after str 415
+
+days = ["Mon", "Tue", "Wed", "Thurth", "Friday","Satur", "Sun"]
+weekend_days = days.pop(-1) + days.pop(-1)
+print(days) #['Mon', 'Tue', 'Wed', 'Thurth', 'Friday']
+print(weekend_days) #SunSatur
+
+days.remove("Tue")
+print(days) #['Mon', 'Wed', 'Thurth', 'Friday']
+
+#IN NOT IN
+
+grades = [87, 69, 95, 51, 63, 77, 49]
+print(69 in grades) #True
+print(77 not in grades) #False
+
+#LEN
+
+print(len(x))
+print(len(grades))
+
+#SORT SORTED methodes
+
+letters = ["a", "f", "d", "k", "y", "b", "e", "c"]
+
+letters_sorted = sorted(letters)
+print(letters_sorted)
+
+letters.sort()
+print(letters)
+
+letters.append("m")
+print(letters_sorted) #['a', 'b', 'c', 'd', 'e', 'f', 'k', 'y', 'm']
+print(letters) #['a', 'b', 'c', 'd', 'e', 'f', 'k', 'y']
+
+letters.sort(reverse=True)
+print(letters) #['y', 'm', 'k', 'f', 'e', 'd', 'c', 'b', 'a']
+
+#RANGE
+
+game_result = list(range(0,101))
+print(game_result)
+
+game_result_10 = list(range(0,101,10))
+print(game_result_10)
+
+print(min(game_result_10))
+print(max(game_result))
+print(len(game_result))
+print(sum(game_result))
+print(sum(game_result_10))
+
+net, passw = 'netia', '123'
+print(net)
+print(passw)
+
+
