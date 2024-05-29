@@ -309,7 +309,7 @@ print(children_boy)
 print(children_girl)
 '''
 
-
+'''
 
 #29.05.2024 Revision lists
 
@@ -476,4 +476,44 @@ net, passw = 'netia', '123'
 print(net)
 print(passw)
 
+letters = [3.14, 'inch', 2.14, 'inch', True]
+letters.remove('inch')
+print(letters)
 
+
+'''
+
+#Exercices 4.17.2
+#Exercice 2
+
+vehicles = ['car', 'bus', 'moto', 'bike']
+print("I'd like to bye a", vehicles[3],".")
+
+
+#Exercice 3
+#Create a list years_list that contains the year you were born and each subsequent
+#  year up to your fifth birthday. For example, if you were born in 1995, the list will
+# look like this: years_list = [1995, 1996, 1997, 1998, 1999, 2000]. Print the year in 
+# which you turned 3 years old, from the years contained in the years_list. Remember,
+# in the first year, you were 0 years old. Add one more year to the end of the list and
+# print the list. In which of the years listed in years_list were you the oldest?
+
+years_list = [1905, 1906, 1907, 1908, 1909, 1910]
+years_list_3 = years_list[3]
+print(years_list_3)
+years_list.append(1911)
+print(years_list)
+print(years_list[-1])
+
+#Exercice 4
+
+things = ["wallet", "mirror", "umbrella"]
+rain = things[2]
+print(rain.capitalize())
+print(things)
+print(rain.upper())
+print(things)
+things.pop(-1)
+print(things)
+
+#Exercice 5
