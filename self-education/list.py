@@ -517,3 +517,52 @@ things.pop(-1)
 print(things)
 
 #Exercice 5
+
+languages = ["Georgian", "Estonian", "Ukranian"]
+small_letter = languages[2]
+print(small_letter.lower())
+languages.reverse()
+print(languages)
+big_letter = languages[0].upper()
+#print(big_letter.upper())
+print(big_letter)
+languages[0] = big_letter
+print(languages)
+
+#Exercice 6
+
+internet = "Web", "Google", "DALLE", "Python"
+internet_list = list(internet)
+print(internet_list)
+
+internet_tuple = tuple(internet)
+print(internet_tuple)
+
+internet_list[2] = "Windows"
+print(internet_list)
+#internet_tuple[2] = "Windows"
+
+#Exercices 4.17.3
+
+#Exercice 1
+
+foreign_languages = ['Franch', "Ukranian", "Albanian", "German", "American English", "Polish"]
+print(foreign_languages)
+foreign_languages.reverse()
+print(foreign_languages)
+foreign_languages.sort()
+print(foreign_languages)
+print(sorted(foreign_languages))
+
+#Exercice 2
+
+numbers_user = input("Enter 4 numbers with spaces: " )
+
+numbers_user_list = list(numbers_user)
+print(numbers_user_list)
+
+while " " in numbers_user_list:
+    numbers_user_list.remove(" ")
+
+print(numbers_user_list)
+
