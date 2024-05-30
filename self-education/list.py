@@ -617,18 +617,107 @@ print(sorted(foreign_languages))
 
 
 #Exercice 4
-numbers = input("Enter 5 numbers with one space between them: ")
+# numbers = input("Enter 5 numbers with one space between them: ")
 
-num_list = list(numbers.split(" "))
-num_list_copy = num_list.copy()
+# num_list = list(numbers.split(" "))
+# num_list_copy = num_list.copy()
 
-num_list_copy.sort()
+# num_list_copy.sort()
 
-print(num_list_copy)
+# print(num_list_copy)
 
-num_list_copy.reverse()
-print(num_list_copy)
+# num_list_copy.reverse()
+# print(num_list_copy)
 
+
+#Exercice 5
+
+#1.Create a list and convert to list
+
+he_said = "Where are you from?"
+he_said_list = list(he_said)
+print(he_said) # Where are you from?
+print(type(he_said)) #<class 'str'>
+print(he_said_list) #['W', 'h', 'e', 'r', 'e', ' ', 'a', 'r', 'e', ' ', 'y', 'o', 'u', ' ', 'f', 'r', 'o', 'm', '?']
+print(type(he_said_list)) #<class 'list'>
+print(he_said.split(" ")) #['Where', 'are', 'you', 'from?']
+print(*he_said.split(" "), sep = "\n" ) #Where
+                                        #are
+                                        #you
+                                        #from?
+
+
+#2.lenght a list, join -> to convert a list into a string
+
+rivers = ["Nile", "Amazon", "Congo", "Niger"]
+print(len(rivers)) #4
+print("-".join(rivers)) #Nile-Amazon-Congo-Niger
+
+#3.slicing, index, changing elements
+
+mountains = ["Everest", "K2", "Makalu"]
+print(mountains[1:3]) #['K2', 'Makalu']
+print(mountains[-1::-1]) #['Makalu', 'K2', 'Everest']
+print(mountains.index("Everest"))  #0
+mountains[-1] = "Karpacz"
+print(mountains) #['Everest', 'K2', 'Karpacz']
+
+
+#4. Append, insert, extend
+
+states_1 = ["Columbia", "Arizona", "Texas", "Alabama", "Florida"]
+states_2 = ["Hawaii", "Iowa"]
+
+states_1_copy = states_1.copy()
+states_2_copy = states_2.copy()
+
+states_1.append(states_2)
+print(states_1) #['Columbia', 'Arizona', 'Texas', 'Alabama', 'Florida', ['Hawaii', 'Iowa']]
+
+state_a = "Newada"
+state_b = "NY"
+
+states_2.append(state_a)
+print(states_2) #['Hawaii', 'Iowa', 'Newada']
+
+states_2.insert(1, state_b)
+print(states_2) #['Hawaii', 'NY', 'Iowa', 'Newada']
+
+states_1.insert(2, states_2)
+print(states_1) #['Columbia', 'Arizona', ['Hawaii', 'NY', 'Iowa', 'Newada'], 'Texas', 'Alabama', 'Florida', ['Hawaii', 'NY', 'Iowa', 'Newada']]
+
+states_1_copy.extend(states_2_copy)
+print(states_1_copy) #['Columbia', 'Arizona', 'Texas', 'Alabama', 'Florida', 'Hawaii', 'Iowa']
+
+
+#5 Delete Remove Pop
+
+sizes = [46, 34, 45, 35, 44, 43, 36, 37, 39, 42, 38, 40]
+
+del sizes [0:3]
+print(sizes) #[35, 44, 43, 36, 37, 39, 42, 38, 40]
+
+sizes.remove(42)
+print(sizes) #[35, 44, 43, 36, 37, 39, 38, 40]
+
+sizes.pop(3)
+print(sizes) #[35, 44, 43, 37, 39, 38, 40]
+
+
+
+#6
+
+birthdays = [12/12/2012, 11/11/2011, 15/5/2003, 30/4/1986, 26/2/2001]
+
+# Sort Sorted in not in
+temperatures = [40.1, 27.2, 39.6, 14.0, -2.2, 23.8, -4.5]
+
+#split remove _
+nikenames = ["a_l_e_x", "f_e_l_i_c_i_a___"]
+
+#
+
+rolls = [1,2,3,4,5,6,7,8,9,10]
 
 
 
