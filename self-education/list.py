@@ -554,15 +554,81 @@ foreign_languages.sort()
 print(foreign_languages)
 print(sorted(foreign_languages))
 
-#Exercice 2
+#Exercice 2 v1
 
-numbers_user = input("Enter 4 numbers with spaces: " )
+#numbers_user = input("Enter 4 numbers with spaces: " )
 
-numbers_user_list = list(numbers_user)
-print(numbers_user_list)
+# numbers_user_list = list(numbers_user)
+# print(numbers_user_list)
 
-while " " in numbers_user_list:
-    numbers_user_list.remove(" ")
+# while " " in numbers_user_list:
+#     numbers_user_list.remove(" ")
+    
+# print(numbers_user_list)
 
-print(numbers_user_list)
+# a = list(map(int, numbers_user_list))
+# print(a)
+
+# b = list(map(float, numbers_user_list))
+# print(b)
+#print(sum(a))
+
+#Exercice 2 v2
+
+#numbers_user_str = input("Enter 4 integers with spaces: " )
+
+#split a string for different parties
+# numbers_user_list = numbers_user_str.split()
+# print(numbers_user_list)
+
+# #convert a string to an integer
+# list_int = list(map(int, numbers_user_list))
+# print(list_int)
+
+# #add all the elements
+# list_sum = sum(list_int)
+
+# print(list_sum)
+
+
+#Exercice 3 v1
+
+# cities = ["Paris", "Berlin", "Rome", "Vienna", "London", "Sidney"]
+
+# cities0_4 = cities[0:5]
+# print(*cities0_4, sep = ", ", end = " ") 
+# print("and " + cities[-1])
+
+
+#Exercice 3 v2
+
+# cities = ["Paris", "Berlin", "Rome", "Vienna", "London", "Sidney"]
+
+# print(', '.join(cities[0:5]) + " and " + cities[-1])
+
+# #Exercice 3 v3
+
+# cities_str = input("Enter 6 cities without a space but whith comma: ")
+# print(cities_str)
+# a = cities_str.split(',')
+# print(a)
+
+# print(", ".join(a[0:5]) + " and " + a[-1] + ".")
+
+
+#Exercice 4
+numbers = input("Enter 5 numbers with one space between them: ")
+
+num_list = list(numbers.split(" "))
+num_list_copy = num_list.copy()
+
+num_list_copy.sort()
+
+print(num_list_copy)
+
+num_list_copy.reverse()
+print(num_list_copy)
+
+
+
 
