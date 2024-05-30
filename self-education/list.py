@@ -688,6 +688,7 @@ print(states_1) #['Columbia', 'Arizona', ['Hawaii', 'NY', 'Iowa', 'Newada'], 'Te
 
 states_1_copy.extend(states_2_copy)
 print(states_1_copy) #['Columbia', 'Arizona', 'Texas', 'Alabama', 'Florida', 'Hawaii', 'Iowa']
+print(states_1[2][1]) #NY
 
 
 #5 Delete Remove Pop
@@ -705,19 +706,57 @@ print(sizes) #[35, 44, 43, 37, 39, 38, 40]
 
 
 
-#6
+#6 join split count 
 
-birthdays = [12/12/2012, 11/11/2011, 15/5/2003, 30/4/1986, 26/2/2001]
+birthdays = [12/12/2012, 11/11/2011, 15/5/2003, 30/4/1986, 26/2/2001, 2/11/2003]
 
-# Sort Sorted in not in
+
+
+# 7.Sort Sorted in not in revers
 temperatures = [40.1, 27.2, 39.6, 14.0, -2.2, 23.8, -4.5]
+temperatures.sort()
+print(temperatures)
+print(-2.2 in temperatures)
+print(7 in temperatures)
+temperatures.reverse()
+print(temperatures)
 
-#split remove _
-nikenames = ["a_l_e_x", "f_e_l_i_c_i_a___"]
+temp_sort = sorted(temperatures)
+print(temp_sort)
 
-#
+temperatures.remove(14.0)
+print(temperatures)
+print(temp_sort)
+
+
+# 8. split remove _
+nickenames = "a_l_e_x, f_e_l_i_c_i_a___"
+nickname_list = nickenames.split("_")
+print(nickname_list)
+
+# 9. count min max
 
 rolls = [1,2,3,4,5,6,7,8,9,10]
+print(min(rolls))
+print(max(rolls))
+print(sum(rolls))
 
 
+#6 join split count 
 
+birthdays = ["12/12/2012", "11/11/2011", "15/5/2003", "30/4/1986", "26/2/2001", "2/11/2003"]
+print(birthdays)
+birthdays_str = " ".join(birthdays)
+print(birthdays_str)
+print(birthdays_str.split("/"))
+print(birthdays_str.count("2003"))
+
+
+#Exercice 6
+
+keywords = ("for", "if", "else", "in", ":")
+
+code = """for each token in the postfix expression : if the token is a number : print('Convert it to an integer and add it to the end of values')
+else print('Append the result to the end of values')
+"""
+print(code)
