@@ -159,7 +159,48 @@ print(colors_dict) #{'red': 'green', 'yellow': 'purple', 'orange': 'yellow'}
 colors_dict = {'red':'green', 'yellow':'purple', 'orange':'blue', 'red':'blue'}
 print(colors_dict) #{'red': 'blue', 'yellow': 'purple', 'orange': 'blue'}
 
-#updating 
-grades_positive = {"A":"90", "B":"75-89", "C":"51-74"}
-print(grades_positive)
 
+#updating 
+grades_positive = {"A":"90", "B":"75-89", "C":"60-74"}
+print(grades_positive)
+grades_new = {"A+":"95-100", "D":"51-59"}
+grades_positive.update(grades_new)
+print(grades_positive) #{'A': '90', 'B': '75-89', 'C': '60-74', 'A+': '95-100', 'D': '51-59'}
+
+
+#del pop clear
+del grades_positive["D"]
+print(grades_positive) #{'A': '90', 'B': '75-89', 'C': '60-74', 'A+': '95-100'}
+
+mark = grades_positive.pop("A+")
+print(mark) #95-100 returns the value of the key
+print(grades_positive) #{'A': '90', 'B': '75-89', 'C': '60-74'}
+
+grades_positive.clear()
+print(grades_positive) #{}
+
+
+#in get
+
+sounds = {"cat":"meow", "dog":"woof", "lion":"roar"}
+print("meow" in sounds) #False in refers to the key
+print("dog" in sounds) #True
+print("roar" in sounds) #Fals
+print(sounds["cat"])
+print(sounds.get("dog", "dog is not in a dictionary")) #woof , get is used to avoid errors in dictionary
+print(sounds.get("cow", "cow is not in a dictionary"))
+
+
+#keys values setdefault
+
+print(sounds.keys()) #dict_keys(['cat', 'dog', 'lion'])
+sounds_values = sounds.values()
+print(sounds_values) #dict_values(['meow', 'woof', 'roar'])
+print(type(sounds_values)) #<class 'dict_values'>
+sounds_values_list = list(sounds_values) #['meow', 'woof', 'roar']
+print(sounds_values_list)
+print(type(sounds_values_list)) #<class 'list'>
+print(list(sounds_values)) #['meow', 'woof', 'roar']
+
+sounds_add = sounds.setdefault("bird", "whistels")
+print(sounds)
