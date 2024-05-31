@@ -1,3 +1,5 @@
+'''
+
 #get access
 
 classes = {
@@ -42,6 +44,7 @@ house = {
 }
 
 print(house)
+
 for flat in house:
     print("People in flat number", flat, ":", house[flat], "people")
 
@@ -115,3 +118,48 @@ print(person)
 
 print(person.popitem())
 print(person)
+
+'''
+
+
+#31.05.2024
+#Revision of theory from 15.05.2024
+
+
+# person_1_name = input("Enter the name of the 1-st person: ")
+# person_1_age = input("Enter the age of the 1-st person: ")
+
+# person_1_dict = {person_1_name, person_1_age}
+
+# print(person_1_dict)
+
+
+#converting from a list to a dictionary
+
+colors = [["red", "green"], ["yellow", "purple"]]
+colors_dict = dict(colors)
+print(colors)
+print(colors_dict) #{'red': 'green', 'yellow': 'purple'}
+
+for key_color in colors_dict:
+    print(key_color, "\t -",  colors_dict[key_color])   #red      - green
+                                                        #yellow   - purple
+
+
+#adding elements to a distionary
+
+colors_dict["orange"] = "blue"
+print(colors_dict) #{'red': 'green', 'yellow': 'purple', 'orange': 'blue'}
+
+#changing the elements
+colors_dict["orange"] = "yellow"
+print(colors_dict) #{'red': 'green', 'yellow': 'purple', 'orange': 'yellow'}
+
+#changing the keys
+colors_dict = {'red':'green', 'yellow':'purple', 'orange':'blue', 'red':'blue'}
+print(colors_dict) #{'red': 'blue', 'yellow': 'purple', 'orange': 'blue'}
+
+#updating 
+grades_positive = {"A":"90", "B":"75-89", "C":"51-74"}
+print(grades_positive)
+
