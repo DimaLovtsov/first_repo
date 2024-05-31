@@ -204,3 +204,106 @@ print(list(sounds_values)) #['meow', 'woof', 'roar']
 
 sounds_add = sounds.setdefault("bird", "whistels")
 print(sounds)
+
+# 5.10 sets
+
+vowels = "aou"
+consonant = "vrdoflu"
+
+vowels_set = set(vowels)
+consonant_set = set(consonant)
+
+print(vowels_set) #{'a', 'o', 'u'}
+print(consonant_set) #{'r', 'v', 'f', 'o', 'd', 'l', 'u'}
+
+#union, all the elements are here one time
+vow_cons = vowels_set | consonant_set
+print(vow_cons) #{'r', 'f', 'd', 'o', 'v', 'u', 'a', 'l'} , a repeated common element "ou"
+
+#intersection, only the common elements
+vow_cons_inters = vowels_set & consonant_set
+print(vow_cons_inters) #{'o', 'u'}
+
+#symmetric difference, without the common elements
+vow_cons_sym = vowels_set ^ consonant_set
+print(vow_cons_sym) #{'a', 'v', 'l', 'r', 'd', 'f'}
+
+#difference, A-B, B-A
+vow_con_sym_dyf_A_B = vowels_set - consonant_set
+print(vow_con_sym_dyf_A_B) #{'a'}
+vow_con_sym_dyf_B_A = consonant_set - vowels_set
+print(vow_con_sym_dyf_B_A) #{'d', 'f', 'v', 'r', 'l'}
+
+
+
+print("a" in vowels_set)
+print(sounds["cat"])
+#print(sounds["elephant"])
+
+
+
+#Exercices 5.12.2
+
+#Exercice 5.12.2.1
+
+famous_person = {
+    "first_name":"Nikola",
+    "last_name":"Tesla" ,
+    "century":"XIX",
+    "progress":"wireless communication" 
+    }
+
+print(famous_person)
+print(famous_person.keys())
+print(famous_person.values())
+
+for key in famous_person:
+    print(key, "\t", famous_person[key])
+
+
+#Exercice 5.12.2.2
+
+name_numbers = {
+    "zero":0,
+    "one":1,
+    "two":2,
+    "three":3,
+    "four":4
+}
+
+
+print("zero: ", name_numbers["zero"]) #zero:  0
+print("one: ", name_numbers["one"])
+print("two: ", name_numbers["two"])
+print("three: ", name_numbers["three"])
+print("four: ", name_numbers["four"])
+
+name_numbers_list = list(name_numbers.items())
+print(name_numbers_list)
+
+
+#Exercice 5.12.2.4
+
+public_transport_list = ["boat", "bus", "plane", "train"]
+public_transport_set = set(public_transport_list)
+print(public_transport_set)
+
+
+#Exercice 5.12.2.4
+
+who = ("cyclist", "driver", "pedestrian")
+who_set = set(who)
+print(who_set)
+
+
+#Exercice 5.12.2.5
+
+meal = {"breakfast":"coffee", "lunch":"milk", "dinner":"tea"}
+meal_set = set(meal)
+print(meal_set) #{'dinner', 'breakfast', 'lunch'}
+meal_set_values = set(meal.values())
+print(meal_set_values) #{'tea', 'coffee', 'milk'}
+meal_set_items = set(meal.items())
+print(meal_set_items) #{('dinner', 'tea'), ('breakfast', 'coffee'), ('lunch', 'milk')}
+
+    
