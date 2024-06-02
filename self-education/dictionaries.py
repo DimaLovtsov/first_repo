@@ -306,4 +306,70 @@ print(meal_set_values) #{'tea', 'coffee', 'milk'}
 meal_set_items = set(meal.items())
 print(meal_set_items) #{('dinner', 'tea'), ('breakfast', 'coffee'), ('lunch', 'milk')}
 
+
+
+#Exercice 5.12.3.1
+
+glossary = {
+    "URL":"Universal resource locator, an easy-to-remember address for calling a web page.",
+    "Wi-Fi":"A wireless method of sending information using radio waves.",
+    "Programming":"The art of creating a program.",
+    "Pixel":("Short for 'picture element', the fundamental unit of a digital image, "
+        "typically a tiny square or dot that contains a single point of color of a larger image.")
+}
+
+print("URL", "\n", glossary["URL"],"\n", sep="")
+
+print("Wi-Fi", "\n", glossary["Wi-Fi"], "\n", sep="")
+
+print("Programming", "\n", glossary["Programming"],"\n", sep="")
+
+print("Pixel", "\n", glossary["Pixel"],"\n", sep="")
     
+
+
+#Exercice 5.12.3.2 v1
+#Where runs the river
+
+# message = (input("""To know where exactly runs the river enter:
+#       1 for Amazon,
+#       2 for Nile,
+#       3 for Mississippi: """))
+
+# regions = {"Amazon":"South America", "Nile":"Africa", "Mississippi":"North America"}
+
+# if message == "1":
+#     print("The Amazon runs through ", regions["Amazon"])
+# elif message == "2":
+#     print("The Nile runs through ", regions["Nile"])
+# else:
+#     print("The Mississippi runs through ", regions["Mississippi"])
+
+
+#Exercice 5.12.3.2 v2
+#Where runs the river
+
+# regions = {"Amazon":"South America", "Nile":"Africa", "Mississippi":"North America"}
+
+# regions_keys = list(regions.keys())
+# print(regions_keys)
+
+# regions_values = list(regions.values())
+# print(regions_values)
+
+# print("The {} runs through {}".format(regions_keys[0], regions_values[0]))
+# print("The {} runs through {}".format(regions_keys[1], regions_values[1]))
+# print("The {} runs through {}".format(regions_keys[2], regions_values[2]))
+
+
+#Exercice 5.12.3.2 v3
+#Where runs the river
+
+print("Exercice 5.12.3.2")
+regions = {"Amazon":"South America", "Nile":"Africa", "Mississippi":"North America"}
+
+regions_keys = list(regions.keys())
+regions_values = list(regions.values())
+
+for i in range (3):
+    print("The {} runs through {}".format(regions_keys[i], regions_values[i]))
