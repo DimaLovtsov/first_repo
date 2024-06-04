@@ -365,11 +365,126 @@ print("Pixel", "\n", glossary["Pixel"],"\n", sep="")
 #Exercice 5.12.3.2 v3
 #Where runs the river
 
-print("Exercice 5.12.3.2")
-regions = {"Amazon":"South America", "Nile":"Africa", "Mississippi":"North America"}
+# print("Exercice 5.12.3.2")
+# regions = {"Amazon":"South America", "Nile":"Africa", "Mississippi":"North America"}
 
-regions_keys = list(regions.keys())
-regions_values = list(regions.values())
+# regions_keys = list(regions.keys())
+# regions_values = list(regions.values())
 
-for i in range (3):
-    print("The {} runs through {}".format(regions_keys[i], regions_values[i]))
+# for i in range (3):
+#     print("The {} runs through {}".format(regions_keys[i], regions_values[i]))
+
+# del regions["Amazon"]
+
+# print(regions)
+
+
+#Exercice 5.12.3.4 
+
+e2g = {
+    "stork":"storch",
+    "hawk":"falke",
+    "woodpecker":"specht",
+    "owl":"eule"
+}
+
+print(e2g)
+print(e2g.get("hawk", "It's not in a dictionary"))
+
+for key in e2g.keys():
+    print(key)  #stork
+                #hawk
+                #woodpecker
+                #owl
+
+for value in e2g.values():
+    print(value)    #storch
+                    # falke
+                    # specht
+                    # eule
+
+#for key, value in e2g.items():
+    #print(f"{key} - {value}")
+
+e2g_items = e2g.items()
+print("stork :", e2g["stork"])
+
+e2g.update({"smok":"rauch", "spark":"funke"})
+
+print(e2g) ##{'stork': 'storch', 'hawk': 'falke', 'woodpecker': 'specht', 'owl': 'eule', 'smok': 'rauch', 'spark': 'funke'}
+
+
+e2g_keys_list = list(e2g.keys()) 
+print(e2g_keys_list) #['stork', 'hawk', 'woodpecker', 'owl', 'smok', 'spark']
+
+e2g_values_list = list(e2g.values())
+print(e2g_values_list) #['storch', 'falke', 'specht', 'eule', 'rauch', 'funke']
+
+
+'''
+#Exercice 5.12.3.6
+#Morse alphabet
+
+while True:
+
+    letter = input("Enter a letter: ")
+
+    alphabet_morse = {
+        "a":".-",
+        "b":"-...",
+        "c":"-.-.",
+        "d":"-..",
+        "e":".",
+        "f":"..-.",
+        "g":"--.",
+        "h":"....",
+        "i":"..",
+        "j":".---",
+        "k":"-.-",
+        "l":".-..",
+        "m":"--",
+        "n":"-.",
+        "o":"---",
+        "p":".--.",
+        "q":"--.-",
+        "r":".-.",
+        "s":"...",
+        "t":"-",
+        "u":"..-",
+        "v":"...-",
+        "w":".--",
+        "x":"-..-",
+        "y":"-.--",
+        "z":"--.."     
+    }
+
+    letter = letter.lower()
+
+    if letter in alphabet_morse:
+
+        print(alphabet_morse[letter])
+
+'''
+
+#Exercice 5.12.3.7
+
+
+
+
+
+physics = ["nuclear physics", "optics", "thermodynamics"]
+computer_science = "computer science"
+biology = {}
+
+science = physics, computer_science, biology
+humanities = {}
+public = {}
+
+subjects = science, humanities, public
+
+
+print(physics)
+
+
+#print(subjects[science_dictionary])
+#print(subjects['science']['physics'])
