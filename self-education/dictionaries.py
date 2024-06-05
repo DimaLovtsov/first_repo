@@ -469,22 +469,65 @@ while True:
 #Exercice 5.12.3.7
 
 
-
-
-
+#Step 2
 physics = ["nuclear physics", "optics", "thermodynamics"]
-computer_science = "computer science"
-biology = {}
+computer_science = {"computer science": {}}
+biology = {"biology": {}}
 
-science = physics, computer_science, biology
+#Step 1
+science = {"physics": physics, "computer science": computer_science, "biology": biology}
 humanities = {}
 public = {}
 
-subjects = science, humanities, public
+#The main dictionary Step 0
+subjects = {"science": science, "humanities": humanities, "public": public}
 
 
-print(physics)
+print(subjects)
+print(subjects["science"]) #{'physics': ['nuclear physics', 'optics', 'thermodynamics'], 'computer science': {'computer science': {}}, 'biology': {'biology': {}}}
+print(subjects["science"]["physics"]) #['nuclear physics', 'optics', 'thermodynamics']
 
 
-#print(subjects[science_dictionary])
-#print(subjects['science']['physics'])
+#Exercice 5.12.3.8
+
+
+
+ny = {"country": "USA", "population": "19 mln people", "fact": "NYC is home to roughly 1 out of every 38 Americans"}
+berlin = {"country": "Germany", "population": "3,5 mln people", "fact": "Berlin is nine times bigger than Paris "}
+dublin = {"country": "Ireland", "population": "1,28 mln people", "fact": "There are over 130 rivers in Dublin"}
+
+
+cities = {"NY": ny, "Berlin": berlin, "Dublin": dublin}
+
+print(cities["NY"]["fact"]) #NYC is home to roughly 1 out of every 38 Americans
+
+#for key in cities:
+    #print(key)  #NY
+                #Berlin
+                #Dublin
+
+print(cities) #{'NY': {'country': 'USA', 'population': '19 mln people', 'fact': 'NYC is home to roughly 
+                #1 out of every 38 Americans'}, 'Berlin': {'country': 'Germany', 'population': '3,5 mln people',
+                # 'fact': 'Berlin is nine times bigger than Paris '}, 'Dublin': {'country': 'Ireland', 
+                #'population': '1,28 mln people', 'fact': 'There are over 130 rivers in Dublin'}}
+
+print(cities["Berlin"]["country"]) #Germany
+
+
+#Exercice 5.12.3.8 v2
+
+cities = {
+    "NY": {"country": "USA", "population": "19 mln people", 
+           "fact": "NYC is home to roughly 1 out of every 38 Americans"},
+    "Berlin": {"country": "Germany", "population": "3,5 mln people",
+                "fact": "Berlin is nine times bigger than Paris "},
+    "Dublin": {"country": "Ireland", "population": "1,28 mln people", 
+               "fact": "There are over 130 rivers in Dublin"}
+    }
+
+for city, info in cities.items():
+    print(city)
+    print(f"country: {info['country']}")
+    print(f"population: {info['population']}")
+    print(f"fact: {info['fact']}")
+    print("")
