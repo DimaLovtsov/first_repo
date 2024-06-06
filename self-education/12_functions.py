@@ -234,33 +234,72 @@ print(n)
 '''
 
 
-from datetime import date, timedelta
+# from datetime import date, timedelta
 
-first_date = date(2024, 5, 23)
-duration = timedelta(days = 60)
+# first_date = date(2024, 5, 23)
+# duration = timedelta(days = 60)
 
 
-shift_day = ['day', 'day', 'day', 'day']
-shift_night = ['night', 'night', 'night', 'night']
-day_off = ['day off', 'day off']
+# shift_day = ['day', 'day', 'day', 'day']
+# shift_night = ['night', 'night', 'night', 'night']
+# day_off = ['day off', 'day off']
 
-calendar_shifts  = []
+# calendar_shifts  = []
 
-#Cycle for shifts
+# #Cycle for shifts
 
-for shift in range(5):
-    calendar_shifts.extend(shift_night)
-    calendar_shifts.extend(day_off)
-    calendar_shifts.extend(shift_day)
-    calendar_shifts.extend(day_off)
-    shift += 1
+# for shift in range(5):
+#     calendar_shifts.extend(shift_night)
+#     calendar_shifts.extend(day_off)
+#     calendar_shifts.extend(shift_day)
+#     calendar_shifts.extend(day_off)
+#     shift += 1
 
-#Cycle for days
+# #Cycle for days
 
-for d in range(duration.days + 1):
-    day = first_date + timedelta(days=d)
-    print(day)
+# for d in range(duration.days + 1):
+#     day = first_date + timedelta(days=d)
+#     print(day)
 
-for shift in calendar_shifts:
-    print(shift)
+# for shift in calendar_shifts:
+#     print(shift)
+
+
+def hello():
+    print("Hi!")
+    print("Whats up?")
+
+hello()
+hello()
+hello()
+
+
+# def person(name):
+#     print(f"What are you doing here, {name}?")
+
+# name = person(input("Enter your name: "))
+
+
+#Exercice 10
+
+# def money(coins, bancnotes):
+#     sum = coins + bancnotes
+#     return sum
+
+# coins = int(input("How many coins do you have? "))
+# bancnotes = int(input("How many bancnotes do you have? "))
+
+# sum = money(coins, bancnotes)
+# print(sum)
+
+
+#Exercice 11
+
+def no_money():
+    return "there is no gaming today!"
+
+print(no_money().upper()) #THERE IS NO GAMING TODAY!
+print(no_money().capitalize()) #There is no gaming today!
+print(no_money().swapcase()) #THERE IS NO GAMING TODAY!
+print(no_money().title()) #There Is No Gaming Today!
 
