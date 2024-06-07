@@ -303,3 +303,51 @@ print(no_money().capitalize()) #There is no gaming today!
 print(no_money().swapcase()) #THERE IS NO GAMING TODAY!
 print(no_money().title()) #There Is No Gaming Today!
 
+
+#Exercice 12
+
+def debt(name, date, amount = "444 PLN"):
+    return "Hello {}. We remind you that you have a debt {}. Pay it till {}.".format(name, amount, date)
+
+print(debt("Mike", "10.06.2024")) #Hello Mike. We remind you that you have a debt 444 PLN. Pay it till 10.06.2024.
+
+
+#Exercice 13
+
+def vegetables(*name, **info ):
+    print(name) #('potatoes', 'cucumber', 'tomatoes')
+    print(info) #{'colour': ('brown', 'red', 'green'), 'size': ('big', 'small')}
+    print(info["size"]) #('big', 'small')
+    print(info["size"][1]) #small
+    print(name[2]) #tomatoes
+
+vegetables("potatoes", "cucumber", "tomatoes", colour = ("brown", "red", "green"),
+            size = ("big", "small"))
+
+
+#Exercice 14 v1
+
+def students_info(*courses, **info):
+    print(type(courses), courses) #<class 'tuple'> ('math', 'bio')
+    print(info) #{'name': 'Joe', 'age': '18'}
+
+courses_list = ["math", "bio"] #we assigned [], but class is ()
+info_dict = {"name":"Joe", "age":"18"}
+
+students_info(*courses_list, **info_dict)
+
+
+#Exercice 14 v2
+
+def students_info(*courses, **info):
+    courses_list = list(courses)
+    print(type(courses_list), courses_list) #<class 'list'> ['math', 'bio']
+    print(info) #{'name': 'Joe', 'age': '18'}
+
+courses_list = ["math", "bio"] #we assigned [], class is [] because line 343
+info_dict = {"name":"Joe", "age":"18"}
+
+students_info(*courses_list, **info_dict)
+
+
+#Exercice 15
