@@ -1,4 +1,4 @@
-#print(__name__)
+print(__name__)
 
 def the_end():
     print("It's time to rest")
