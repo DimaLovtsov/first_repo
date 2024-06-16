@@ -8,6 +8,12 @@ print("The CWD is: ", os.getcwd()) #C:\Projects VS Code\repository\first_repo
 
 # print("The new CWD is: ", os.getcwd())
 
-while True:
-    print("5")
+os.mkdir("New_directory")
+if os.path.exists("New_directory"):
+    print("The directory exists.")
+
+print("The CWD is: ", os.getcwd())
+
+
+
     
