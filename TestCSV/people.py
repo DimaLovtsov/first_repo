@@ -61,16 +61,93 @@ with open("people.csv", "r") as file:
         #['2', 'Mark Twain', 'Never regret anything that made you smile']
         #['3', 'Oscar Wilde', 'Be yourself everyone else is already taken']
 
-import csv
+# import csv
 
-with open("quotes.csv", "r") as file:
-    reader = csv.reader(file, skipinitialspace=True, quoting=csv.QUOTE_ALL)
-    for row in reader:
-        print(row)
+# with open("quotes.csv", "r") as file:
+#     reader = csv.reader(file, skipinitialspace=True, quoting=csv.QUOTE_ALL)
+#     for row in reader:
+#         print(row)
 
         #['SN', 'Name', 'Quotes']
         #['1', 'Buddha', 'What we think we become']
         #['2', 'Mark Twain', 'Never regret anything that made you smile']
         #['3', 'Oscar Wilde', 'Be yourself everyone else is already taken']
+
+
+#Exercise 4
+
+# import csv
+
+# with open("people.csv", "r") as file:
+#     reader = csv.reader(file)
+
+#     with open("new_people_2.csv", "w") as new_file:
+#         writer = csv.writer(new_file, delimiter="/", skipinitialspace=True)
+
+#         for line in reader:
+#             writer.writerow(line)
+
+
+#Exercice 5
+#DictReader
+
+# import csv
+
+# with open("people.csv", "r") as csv_file:
+#     csv_reader = csv.DictReader(csv_file)
+
+#     for line in csv_reader:
+#         print(line)
+
+        #{'Name': 'Jack', '   Age': '   23', ' Profession': '  Doctor'}
+        #{'Name': 'Miller', '   Age': ' 22', ' Profession': '  Engineer'}
+        #it's 2 dictionaries
+
+# with open("people.csv", "r") as csv_file:
+#     csv_reader = csv.reader(csv_file)
+
+#     for line in csv_reader:
+#         print(line)
+
+        #['Name', '   Age', ' Profession']
+        #['Jack', '   23', '  Doctor']
+        #['Miller', ' 22', '  Engineer']
+        #it's 3 lists
+
+#Exercice 5 
+#Dictionaries indeks
+
+# import csv
+
+# with open ("people.csv", 'r') as csv_file:
+#     csv_reader = csv.DictReader(csv_file, skipinitialspace=True)
+
+#     for line in csv_reader:
+#         print(line["Age"])
+
+#         #22
+#         #23
+
+
+#Exercice 6
+#DictWriter
+
+import csv
+
+with open ("people.csv", "r") as csv_file:
+    csv_reader = csv.DictReader(csv_file)
+
+    with open("new_people_3", "w") as new_csv_file:
+        fieldnames = ["Name", "Age", "Profession"]
+        csv_writer = csv.DictWriter(new_csv_file, fieldnames=fieldnames, delimiter="|")
+
+        for line in csv_writer:
+            csv_writer.writerow(line)
+
+
+
+
+
+    
         
 
