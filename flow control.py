@@ -70,5 +70,10 @@ else:
     print("The number is zero")
 
 
+number = int(input("Enter your age: "))
 
+if number < 18:
+    print("Let's grow up")
+else:
+    print("Really? Show your ID")
     
